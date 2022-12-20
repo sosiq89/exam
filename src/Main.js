@@ -7,15 +7,15 @@ import Material from "./top/Material";
 
 
 const Main = () => {
-  const [pathUrl, setPathUrl] = useState("/logo");
-  console.log({pathUrl});
+
   return (
     <div id="MainDiv">
       <BrowserRouter>
         <TopMenu />
         <Routes>
+          <Route path="/" element={<MiddleMenu />}></Route>
           <Route path="/logo" element={<MiddleMenu />}></Route>
-          <Route path="/purchase" element={<Purchase />}></Route>
+          <Route path="/purchase/*" element={<Purchase />}></Route>
           <Route path="/material" element={<Material />}></Route>
         </Routes>
       </BrowserRouter>
