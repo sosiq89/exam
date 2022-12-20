@@ -6,8 +6,10 @@ const TopMenu = () => {
     <div id="container">
       <div id="logo"
             style={{backgroundImage: 'url(/logo.jpeg)'}}></div>
-      <div id="purchase"></div>
-      <div id="material"></div>
+      <div id="purchase"
+           style={{backgroundImage: 'url(/purchase.jpeg)'}}></div>
+      <div id="material"
+           style={{backgroundImage: 'url(/material.jpeg)'}}></div>
     </div>
   )
 }

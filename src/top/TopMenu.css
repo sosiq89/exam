@@ -7,25 +7,36 @@ div{
   height : 80px;
   margin : auto;
   margin-top : 20px;
-  border : solid 1px blue;
   display: flex;
 }
 
 #logo{
-  border: solid 1px black;
   width : 20%;
   height : 100%;
   flaot : left;
+  background-size: cover;
+}
+#logo:hover{
+  border : solid 2px black;
+  cursor: pointer;
 }
 #purchase{
-  border : solid 1px orange;
   width : 38%;
   height : 100%;
   float : left;
+  background-size: cover;
+}
+#purchase:hover{
+  border : solid 2px black;
+  cursor: pointer;
 }
 #material{
-  border : solid 1px red;
   width : 38%;
   height : 100%;
   flaot : left;
+  background-size: cover;
+}
+#material:hover{
+  border : solid 2px black;
+  cursor: pointer;
 }
