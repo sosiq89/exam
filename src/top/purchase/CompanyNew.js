@@ -7,6 +7,7 @@ const CompanyNew = () =>{
   const [cate, setCate] = useState('');
   const [manager, setManager] = useState('');
   const [location, setLocation] = useState('');
+
   const companyPost = () => {
     const companyInfo = {
       name : name,
@@ -17,10 +18,8 @@ const CompanyNew = () =>{
     console.log(companyInfo);
 
     let urlPath = '/purchase/companyNew';
-    axios.post(urlPath, companyInfo
-    ).then((r) =>{
-      console.log(r);
-    });
+    axios.post(urlPath)
+      .then(res =>{console.log(res)});
 
     console.log('end')
   }
