@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Table} from "react-bootstrap";
 import axios from "axios";
+
 
 const CompanyNew = () =>{
   const [name, setName] = useState('');
@@ -9,19 +10,16 @@ const CompanyNew = () =>{
   const [location, setLocation] = useState('');
 
   const companyPost = () => {
-    const companyInfo = {
+    const companyVO = {
       name : name,
       cate : cate,
       manager : manager,
       location : location
     }
-    console.log(companyInfo);
-
     let urlPath = '/purchase/companyNew';
-    axios.post(urlPath)
+    console.log(urlPath);
+    axios.post(urlPath, companyVO)
       .then(res =>{console.log(res)});
-
-    console.log('end')
   }
 
   return(
