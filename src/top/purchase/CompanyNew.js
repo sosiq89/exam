@@ -16,10 +16,12 @@ const CompanyNew = () =>{
       manager : manager,
       location : location
     }
+
     let urlPath = '/purchase/companyNew';
-    console.log(urlPath);
     axios.post(urlPath, companyVO)
       .then(res =>{console.log(res)});
+
+    window.location.replace("/purchase/companyNew");
   }
 
   return(
