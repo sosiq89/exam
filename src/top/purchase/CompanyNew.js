@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import {Table} from "react-bootstrap";
 import axios from "axios";
+import {useLocation} from "react-router-dom";
 
 
 const CompanyNew = () =>{
@@ -23,7 +24,6 @@ const CompanyNew = () =>{
 
     window.location.replace("/purchase/companyNew");
   }
-
   return(
     <div id="newContainer">
       <Table striped bordered hover>
@@ -31,22 +31,22 @@ const CompanyNew = () =>{
           <tr>
             <td>업체 이름</td>
             <td>
-              <input onBlur={(e) => {
+              <input id="name" onChange={(e) => {
                 setName(e.target.value);
               }} />
             </td>
             <td>카테고리</td>
-            <td><input onBlur={(e) => {
+            <td><input id="cate" onChange={(e) => {
               setCate(e.target.value);
             }}/></td>
           </tr>
           <tr>
             <td>담당자</td>
-            <td><input onBlur={(e) => {
+            <td><input id="manager" onChange={(e) => {
               setManager(e.target.value);
             }}/></td>
             <td>지역</td>
-            <td><input onBlur={(e) => {
+            <td><input id="location" onChange={(e) => {
               setLocation(e.target.value);
             }}/></td>
           </tr>
