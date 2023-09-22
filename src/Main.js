@@ -1,13 +1,11 @@
-import React, {Component, useState} from "react";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TopMenu from "./top/TopMenu";
 import MiddleMenu from "./middle/MiddleMenu";
 import Purchase from "./top/Purchase";
 import Material from "./top/Material";
 
-
 const Main = () => {
-
   return (
     <div id="MainDiv">
       <BrowserRouter>
@@ -20,7 +18,7 @@ const Main = () => {
         </Routes>
       </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
 export default Main;
