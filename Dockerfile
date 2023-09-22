@@ -1,5 +1,8 @@
-FROM nginx:alpine
-WORKDIR /usr/share/nginx/html
-COPY build/ .
+FROM node:20
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
 EXPOSE 8123
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]
