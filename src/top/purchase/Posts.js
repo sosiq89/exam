@@ -31,6 +31,7 @@ function Posts({ companyLists }) {
           },
         });
       }
+      return null;
     });
     console.log(company);
   };
