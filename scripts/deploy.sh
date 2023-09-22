@@ -1,3 +1,5 @@
+pwd
+ls
 # 가동중인 app 도커 중단 및 삭제
 sudo docker ps -a -q --filter "name=app" | grep -q . && docker stop app && docker rm app | true
 
