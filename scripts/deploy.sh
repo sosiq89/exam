@@ -4,7 +4,7 @@ ls
 sudo docker ps -a -q --filter "name=app" | grep -q . && docker stop app && docker rm app | true
 
 # 기존 이미지 삭제
-sudo docker rmi sosiq/ppippo:latest
+sudo docker rmi -f sosiq/ppippo:latest
 
 # 도커허브 이미지 pull
 sudo docker pull sosiq/ppippo:latest
