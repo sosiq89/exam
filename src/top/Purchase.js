@@ -16,7 +16,7 @@ const Purchase = () => {
   };
   return (
     <div id="purchaseContainer">
-      <h3>구매관리 </h3>
+      <h3>구매관리 TEST</h3>
       <div id="purchaseMenu">
         <div id="companyList" onClick={urlPath}>
           <label className="purchaseLabel">업체 목록</label>
