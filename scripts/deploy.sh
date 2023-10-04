@@ -1,5 +1,3 @@
-pwd
-ls
 # 가동중인 app 도커 중단 및 삭제
 sudo docker ps -a -q --filter "name=app" | grep -q . && docker stop app && docker rm app | true
 
@@ -10,7 +8,7 @@ sudo docker rmi -f sosiq/ppippo:latest
 sudo docker pull sosiq/ppippo:latest
 
 # 도커 run
-docker run -d -p 8123:8123 --name app sosiq/ppippo:latest
+docker run -d -p 8111:3000 --name app sosiq/ppippo:latest
 
 # 사용하지 않는 불필요한 이미지 삭제 -> 현재 컨테이너가 물고 있는 이미지는 삭제되지 않습니다.
 docker rmi -f $(docker images -f "dangling=true" -q) || true
